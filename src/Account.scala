@@ -1,0 +1,45 @@
+package src
+
+import scala.collection.mutable.ListBuffer
+
+/**
+  * Created by parshah on 21-Jul-16.
+  */
+object Account {
+  var amount: ListBuffer[BigInt] = ListBuffer(0,0,0,0,0)
+  var user: ListBuffer[String] = ListBuffer("user1","user2","user3","user4","user5")
+  var PIN: ListBuffer[Int] = ListBuffer(9999,9999,9999,9999)
+
+  def view_amount(i:Int): BigInt = {
+    return amount(i)
+  }
+
+  def deposit(x: BigInt,i:Int): BigInt = {
+    amount += x
+    amount(i)
+  }
+
+  def withdraw(x: BigInt,i:Int): BigInt = {
+    amount -= x
+    amount(i)
+  }
+
+//  def Change_PIN(x: Int): String = {
+//    if (x >= 1000 && x <= 9999) {
+//      PIN = x
+//      return "PIN has been changed"
+//    }
+//    else{
+//      return "Invalid PIN format. Please enter a number between 1000 and 9999"
+//    }
+//}
+  def checkPIN(x:Int,i:Int): Boolean ={
+    if (x == PIN(i)){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
+}
