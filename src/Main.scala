@@ -35,7 +35,7 @@ object Main {
         case 2 => Account.deposit(Input.Amount(), acc); println("your account balance is " + Account.amount(acc))
         case 3 => Account.withdraw(Input.Amount(), acc); println("your account balance is " + Account.amount(acc))
       }
-      print("Success!\nTo perform another operation")
+      print("Success!\nTo perform another operation ")
 
 
       method()

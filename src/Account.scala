@@ -5,7 +5,7 @@ import scala.collection.mutable.ListBuffer
 /**
   * Created by parshah on 21-Jul-16.
   */
-object  Account {
+object Account {
   var amount: ListBuffer[BigInt] = ListBuffer(0,0,0,0,0)
   var user: ListBuffer[String] = ListBuffer("user1","user2","user3","user4","user5")
   var PIN: ListBuffer[Int] = ListBuffer(9999,9999,9999,9999)
@@ -15,12 +15,12 @@ object  Account {
   }
 
   def deposit(x: BigInt,i:Int): BigInt = {
-    amount += x
+    amount(i) += x
     amount(i)
   }
 
   def withdraw(x: BigInt,i:Int): BigInt = {
-    amount -= x
+    amount(i) -= x
     amount(i)
   }
 
